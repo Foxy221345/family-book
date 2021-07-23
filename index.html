@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Family book
+        </title>
+    </head>
+
+    <body>
+
+        <style>
+            img{height:250;
+            width:200;}
+        </style>
+    <center>
+        <h1> My family book</h1>
+
+        <img id="default" src="Images/Photo1.jpg">
+        <br>
+        <br>
+        <label id="name">Aparna Anantha Narayanan</label>
+        <br>
+        <br>
+      <div>
+        <button onclick="next()">Next</button>
+      </div>
+
+      </center>
+
+      <script text="javascript">
+          var names = ["Aparna Ananthanarayanan","Harshini Pramodh","Harini Pramodh","Pramodh Narayanan"];
+          var images = ["Images/Photo1.jpg", "Images/Photo2.jpg","Images/Photo3.jpg","Images/Photo4.jpg"];
+
+          var imageId=0;
+          function next()
+          {
+            imageId = (imageId + 1) % 4;
+            document.getElementById("default").src=images[imageId];
+            document.getElementById("name").innerHTML=names[imageId];
+          } //end function next
+      </script>
+
+
+
+    </body>
+</html>
